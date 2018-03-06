@@ -1,0 +1,18 @@
+<h2>list</h2>
+<table>
+  <th>
+    <th>ID</th>
+    <th>Recipe name</th>
+  </th>
+  {{#each recipesDatabase}}
+  <tr>
+    <td>{{id}}</td>
+    <td>{{recipename}}</td>
+     <td><a href="/recipes/{{id}}/edit">Edit</a></td>
+     <td>
+        <form method="POST" action="/recipes/{{id}}?_method=DELETE">
+        <input type="submit" value="Delete"/>
+        </form>
+  </tr>
+  {{/each}}
+</table>

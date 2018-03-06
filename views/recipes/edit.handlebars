@@ -1,0 +1,14 @@
+<h2>Edit recipe</h2>
+<form method="POST" action="/recipes/{{recipe.id}}?_method=PUT">
+<div class="input-wrapper">
+    <label>name</label>
+    <input type="text" name="recipename" value="{{recipe.recipename}}"/>
+    </div>
+    <label>Description</label>
+    <div class="input-wrapper">
+    <textarea name="description"></textarea>
+    </div>
+    <div class="input-wrapper">
+    <input type="submit" value="Update" />
+    </div>
+</form>
